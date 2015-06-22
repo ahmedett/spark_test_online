@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "question")
-public class Test {
+public class Question {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,32 +16,25 @@ public class Test {
 	private String type;
 	
 	
-	@Override
-	public String toString() {
-		return "Test [id=" + id + ", type=" + type + "]";
+	public Question() {
 	}
-
-
+	
 	public Long getId() {
 		return id;
 	}
-
-
+	
 	public void setId(Long id) {
 		this.id = id;
 	}
-
-
 	public String getType() {
 		return type;
 	}
-
-
 	public void setType(String type) {
 		this.type = type;
 	}
-
-
-	public Test() {
-	} 
+	
+	@Override
+	public String toString() {
+		return "Question [id=" + id + ", type=" + type + "]";
 	}
+}
